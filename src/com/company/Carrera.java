@@ -40,7 +40,7 @@ public class Carrera {
 
     }
 
-    public void darDeAltaAuto(Double velocidad, Double aceleracion, Double anguloDeGiro, String patente) {
+    public void darDeAltaAuto(Integer velocidad, Integer aceleracion, Integer anguloDeGiro, String patente) {
         Vehiculo unAuto = new Auto(velocidad, aceleracion, anguloDeGiro, patente);
         if (getCantidadDeVheiculosPermitidos() > listaDeVehiculos.size()) {
             listaDeVehiculos.add(unAuto);
@@ -48,10 +48,12 @@ public class Carrera {
         }
     }
 
-    public void darDeAltaMoto(Double velocidad, Double aceleracion, Double anguloDeGiro, String patente) {
+    public void darDeAltaMoto(Integer velocidad, Integer aceleracion, Integer anguloDeGiro, String patente) {
         Vehiculo unaMoto = new Auto(velocidad, aceleracion, anguloDeGiro, patente);
         if (getCantidadDeVheiculosPermitidos() > listaDeVehiculos.size()) {
             listaDeVehiculos.add(unaMoto);
+        } else {
+            System.out.println("Los cupos estan cerrados");
         }
     }
 
@@ -65,9 +67,13 @@ public class Carrera {
             if (patente.equals(vehiculo.getPatente())) {
                 listaDeVehiculos.remove(vehiculo);
             }
-
         }
+    }
 
+    public void definirGanador() {
+        for (Vehiculo vehiculo : listaDeVehiculos) {
+            System.out.println("Los resultados son: "+vehiculo.resultado());
+        }
     }
 }
 

@@ -6,15 +6,15 @@ import java.util.Objects;
 
 public abstract class Vehiculo {
 
-    private Double velocidad;
-    private Double aceleracion;
-    private Double anguloDeGiro;
+    private Integer velocidad;
+    private Integer aceleracion;
+    private Integer anguloDeGiro;
     private String patente;
     private Integer peso;
     private Integer ruedas;
 
 
-    public Vehiculo(Double velocidad, Double aceleracion, Double anguloDeGiro, String patente, Integer peso, Integer ruedas) {
+    public Vehiculo(Integer velocidad, Integer aceleracion, Integer anguloDeGiro, String patente, Integer peso, Integer ruedas) {
         this.velocidad = velocidad;
         this.aceleracion = aceleracion;
         this.anguloDeGiro = anguloDeGiro;
@@ -24,20 +24,34 @@ public abstract class Vehiculo {
     }
 
 
-    public Double getVelocidad() {
+    public Integer getVelocidad() {
         return velocidad;
     }
 
-    public Double getAceleracion() {
+    public Integer getAceleracion() {
         return aceleracion;
     }
 
-    public Double getAnguloDeGiro() {
+    public Integer getAnguloDeGiro() {
+        return peso;
+    }
+
+    public Integer getRuedas() {
+        return ruedas;
+    }
+
+    public Integer getPeso() {
         return anguloDeGiro;
     }
 
     public String getPatente() {
         return patente;
+    }
+
+    public Integer resultado() {
+        Integer resultado;
+        resultado = (getVelocidad() * getAceleracion()) / (2 * getAnguloDeGiro() * (getPeso() - (getRuedas() * 100)));
+        return resultado;
     }
 
     @Override
@@ -47,6 +61,6 @@ public abstract class Vehiculo {
         }
 
         Vehiculo otroVehiculo = (Vehiculo) vehiculoAComparar;
-return otroVehiculo.getPatente().equals(this.patente);
+        return otroVehiculo.getPatente().equals(this.patente);
     }
 }
