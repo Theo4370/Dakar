@@ -11,7 +11,7 @@ public class Main {
         unaCarrera.darDeAltaMoto(15.6, 20.3, 50.0, "Algo");
         System.out.println("Agregue: " + unaCarrera.getListaDeVehiculos());
         unaCarrera.eliminarVehiculo("4370");
-        unaCarrera.eliminarVehiculo();
+        //unaCarrera.eliminarVehiculo();
         System.out.println("Agregue: " + unaCarrera.getListaDeVehiculos());
     }
 

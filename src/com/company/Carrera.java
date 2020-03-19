@@ -56,7 +56,7 @@ public class Carrera {
     }
 
     public void eliminarVehiculo(Vehiculo vehiculo) {
-        Vehiculo vehiculo1 = null;
+//        Vehiculo vehiculo1 = null;
         listaDeVehiculos.remove(vehiculo);
     }
 
