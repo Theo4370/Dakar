@@ -54,5 +54,20 @@ public class Carrera {
             listaDeVehiculos.add(unaMoto);
         }
     }
+
+    public void eliminarVehiculo(Vehiculo vehiculo) {
+        Vehiculo vehiculo1 = null;
+        listaDeVehiculos.remove(vehiculo);
+    }
+
+    public void eliminarVehiculo(String patente) {
+        for (Vehiculo vehiculo : listaDeVehiculos) {
+            if (patente.equals(vehiculo.getPatente())) {
+                listaDeVehiculos.remove(vehiculo);
+            }
+
+        }
+
+    }
 }
 

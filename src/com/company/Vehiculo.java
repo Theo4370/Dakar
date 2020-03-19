@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public abstract class Vehiculo {
 
@@ -23,9 +24,6 @@ public abstract class Vehiculo {
     }
 
 
-
-
-
     public Double getVelocidad() {
         return velocidad;
     }
@@ -42,4 +40,13 @@ public abstract class Vehiculo {
         return patente;
     }
 
+    @Override
+    public boolean equals(Object vehiculoAComparar) {
+        if (!(vehiculoAComparar instanceof Vehiculo)) {
+            return false;
+        }
+
+        Vehiculo otroVehiculo = (Vehiculo) vehiculoAComparar;
+return otroVehiculo.getPatente().equals(this.patente);
+    }
 }
