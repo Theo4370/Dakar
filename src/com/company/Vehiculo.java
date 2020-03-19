@@ -48,10 +48,8 @@ public abstract class Vehiculo {
         return patente;
     }
 
-    public Integer resultado() {
-        Integer resultado;
-        resultado = (getVelocidad() * getAceleracion()) / (2 * getAnguloDeGiro() * (getPeso() - (getRuedas() * 100)));
-        return resultado;
+    public Integer getResultado() {
+        return (getVelocidad() * getAceleracion()) / (2 * getAnguloDeGiro() * (getPeso() - (getRuedas() * 100)));
     }
 
     @Override

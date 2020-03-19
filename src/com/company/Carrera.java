@@ -72,7 +72,7 @@ public class Carrera {
 
     public void definirGanador() {
         for (Vehiculo vehiculo : listaDeVehiculos) {
-            System.out.println("Los resultados son: "+vehiculo.resultado());
+            System.out.println("Los resultados son: "+vehiculo.getResultado());
         }
     }
 }
