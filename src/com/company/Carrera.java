@@ -73,14 +73,18 @@ public class Carrera {
     }
 
     public void definirGanador() {
-        for (Vehiculo vehiculo : listaDeVehiculos) {
-            System.out.println("El resultado de este vehiculo fue: " + vehiculo.getResultado());
-            //todo falta comparar resultados y deifnir el mayor
-        }
-    }
+        Integer ganador = 0;
 
-    SocorristaAuto socorristaAuto = new SocorristaAuto();
-    SocorristaMoto socorristaMoto = new SocorristaMoto();
+        for (Vehiculo vehiculo : listaDeVehiculos) {
+            if (ganador < vehiculo.getResultado()) {
+                ganador = vehiculo.getResultado();
+            }
+        }
+        System.out.println("El ganador fue: " + ganador);
+    }
+    /**
+     SocorristaAuto socorristaAuto = new SocorristaAuto();
+     SocorristaMoto socorristaMoto = new SocorristaMoto();
 
      public void socorrerAuto(String patente) {
      for (Vehiculo vehiculo : listaDeVehiculos) {
@@ -89,6 +93,7 @@ public class Carrera {
      socorristaAuto.socorrer();
      }
      }
-     }
-}
+     } */
 
+
+}

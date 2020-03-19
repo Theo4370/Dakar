@@ -62,4 +62,5 @@ public abstract class Vehiculo {
         Vehiculo otroVehiculo = (Vehiculo) vehiculoAComparar;
         return otroVehiculo.getPatente().equals(this.patente);
     }
+
 }
