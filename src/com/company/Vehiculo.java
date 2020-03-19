@@ -33,7 +33,7 @@ public abstract class Vehiculo {
     }
 
     public Integer getAnguloDeGiro() {
-        return peso;
+        return anguloDeGiro;
     }
 
     public Integer getRuedas() {
@@ -41,7 +41,7 @@ public abstract class Vehiculo {
     }
 
     public Integer getPeso() {
-        return anguloDeGiro;
+        return peso;
     }
 
     public String getPatente() {
@@ -49,7 +49,8 @@ public abstract class Vehiculo {
     }
 
     public Integer getResultado() {
-        return (getVelocidad() * getAceleracion()) / (2 * getAnguloDeGiro() * (getPeso() - (getRuedas() * 100)));
+        //Le agrego el *1000 porque sino me tira un decimal y me devuelve 0
+        return 1000*(getVelocidad() * getAceleracion()) / (2 * getAnguloDeGiro() * (getPeso() - (getRuedas() * 100)));
     }
 
     @Override

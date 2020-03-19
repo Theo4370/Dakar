@@ -45,6 +45,8 @@ public class Carrera {
         if (getCantidadDeVheiculosPermitidos() > listaDeVehiculos.size()) {
             listaDeVehiculos.add(unAuto);
 
+        } else {
+            System.out.println("Los cupos estan cerrados, no puedes agregar este auto");
         }
     }
 
@@ -53,7 +55,7 @@ public class Carrera {
         if (getCantidadDeVheiculosPermitidos() > listaDeVehiculos.size()) {
             listaDeVehiculos.add(unaMoto);
         } else {
-            System.out.println("Los cupos estan cerrados");
+            System.out.println("Los cupos estan cerrados, no puedes agregar esta moto");
         }
     }
 
@@ -72,8 +74,21 @@ public class Carrera {
 
     public void definirGanador() {
         for (Vehiculo vehiculo : listaDeVehiculos) {
-            System.out.println("Los resultados son: "+vehiculo.getResultado());
+            System.out.println("El resultado de este vehiculo fue: " + vehiculo.getResultado());
+            //todo falta comparar resultados y deifnir el mayor
         }
     }
+
+    SocorristaAuto socorristaAuto = new SocorristaAuto();
+    SocorristaMoto socorristaMoto = new SocorristaMoto();
+
+     public void socorrerAuto(String patente) {
+     for (Vehiculo vehiculo : listaDeVehiculos) {
+     if (patente.equals(vehiculo.getPatente())) {
+
+     socorristaAuto.socorrer();
+     }
+     }
+     }
 }
 

@@ -5,17 +5,18 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 
-
+        //     SocorristaAuto socorristaAuto = new SocorristaAuto();
+        //Auto unAuto = new Auto(2,3,4,"hola");
         Carrera unaCarrera = new Carrera(100, 150.0, "carrera1", 3);
-        unaCarrera.darDeAltaAuto(20, 50, 30, "4370");
-        unaCarrera.darDeAltaMoto(30,40,20,"Algo mas");
-        unaCarrera.darDeAltaMoto(10, 20, 50, "Algo");
+        unaCarrera.darDeAltaAuto(20, 50, 40, "4370");
+        unaCarrera.darDeAltaMoto(30, 40, 20, "Algo mas");
+        unaCarrera.darDeAltaAuto(10, 20, 50, "Algo");
         System.out.println("Agregue: " + unaCarrera.getListaDeVehiculos());
         //unaCarrera.eliminarVehiculo("4370");
         //unaCarrera.eliminarVehiculo();
         //System.out.println("Agregue: " + unaCarrera.getListaDeVehiculos());
-    unaCarrera.definirGanador();
-
+        unaCarrera.definirGanador();
+//socorristaAuto.socorrer(unAuto);
     }
 
 }
