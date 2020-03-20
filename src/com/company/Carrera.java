@@ -94,7 +94,7 @@ public class Carrera {
             }
         }
 
-        System.out.println("El ganador es: "+vehiculoGanador.getPatente() + " con un puntaje de "+puntajeMaximoTemporal );
+        System.out.println("El ganador, de patente "+vehiculoGanador.getPatente() + ", gano con un puntaje de "+puntajeMaximoTemporal );
     }
 
    /** public void definirGanador() {
